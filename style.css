@@ -59,7 +59,7 @@ button{
     padding: 20px;
 }
 
-.address1,.skills,.hobbies{
+.address1,.skills,.hobbies,.objective{
     width: 100%;
     height: 80px;
     padding: 20px;
@@ -94,23 +94,60 @@ button:hover{
 
 
 .container1{
+    width: 80%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.col1{
+    text-align: center;
+    height: 250px;
+    width: 100%;
+    background-color: lightseagreen;
+    margin-bottom: 0px;
+    
+}
+
+.col2{
+    height: 500px;
     width: 100%;
 }
-
-.col{
-    text-align: center;
-    height: 100px;
-    padding: 10px;
-}
-
 img{
     border-radius: 40%;
     height: 100px;
     width: 100px;
+    padding: 10px;
+    text-align: left;
 }
 
 .cardheader{
     background-color: lightseagreen;
     padding: 10px;
     margin: 10px;
+}
+
+div #name{
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: solid;
+}
+
+#cv h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+#cv h4{
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+}
+
+#cv p{
+    padding: 2px;
+}
+
+.imgclass{
+    display: flex;
 }

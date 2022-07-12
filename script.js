@@ -48,6 +48,8 @@ function generatecv(){
 
     document.getElementById("email").innerHTML=document.getElementsByClassName("email")[0].value;
 
+    document.getElementById("objective").innerHTML=document.getElementsByClassName("objective")[0].value;
+
     document.getElementById("linkedin").innerHTML=document.getElementsByClassName("linkedin")[0].value;
 
     document.getElementById("college").innerHTML=document.getElementsByClassName("college")[0].value;
@@ -62,23 +64,34 @@ function generatecv(){
 
     document.getElementById("hobbies").innerHTML=document.getElementsByClassName("hobbies")[0].value;
 
-    let we=document.getElementsByClassName("skills");
-    let str="";
+    // let we=document.getElementsByClassName("skills");
+    // let str="";
 
-    for(let e of we){
-        str = str + '<li> ${e.value} </li>';
+    // for(let e of we){
+    //     str = str + '<li> ${e.value} </li>';
+    // }
+
+    // document.getElementById("skills").innerHTML= str;
+
+    // let ho=document.getElementsByClassName("hobbies");
+    // let str1="";
+
+    // for(let e of ho){
+    //     str1 = str1+'<li>${e.value}</li>';
+    // }
+
+    // document.getElementById("hobbies").innerHTML= str1;
+
+
+    let file=document.getElementsByClassName("img")[0].file;
+
+    let reader=new FileReader();
+
+    reader.readAsDataURL(file);
+
+    reader.onloadend=function(){
+        document.getElementById("img").src=reader.result;
     }
-
-    document.getElementById("skills").innerHTML= str;
-
-    let ho=document.getElementsByClassName("hobbies");
-    let str1="";
-
-    for(let e of ho){
-        str1 = str1+'<li>${e.value}</li>';
-    }
-
-    document.getElementById("hobbies").innerHTML= str1;
 
     document.getElementById("cv-form").style.display='none';
     document.getElementById("cv").style.display='block';
@@ -90,3 +103,5 @@ function generatecv(){
 function download(){
     window.print();
 }
+
+

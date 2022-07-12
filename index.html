@@ -9,14 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+    <!-- the main heading -->
+
         <div class="heading">
         <h1 class="">Resume Builder</h1>
         </div>
         <hr>
+                <!-- the form starts -->
+
         <div class="container" id="cv-form">
-        <div class="section1">
-        <p><h2>personal information</h2>
+        <div class="section1">                     <!-- section for personal information -->
+        <p><h2>personal information</h2>   
         <div class="section11">
+            <div class="imgclass">
+                <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" class="img">
+                <input type="file" name="" class="img" placeholder="select file">
+            </div>
             <h4>name</h4>
             <input type="text" class="name" placeholder="enter name" required>
             <p><h4>gender</h4>
@@ -32,7 +40,7 @@
         </div>
         </p>
         <p>
-        <div class="section11">
+        <div class="section11">            <!-- section for address -->
             <h3>address</h3>
             <h4>address</h4>
             <textarea class="address" placeholder="address" required></textarea>
@@ -47,7 +55,7 @@
         </div>
         </p>
         <p>
-        <div class="section11">
+            <div class="section11">            <!-- section for contact details -->
             <h3>contact details</h3>
             <h4>mobile number</h4>
             <input type="number" class="mobile" id="mobile1" required>
@@ -60,7 +68,7 @@
         </div>
         <p>
         <div>
-            <h2>educational information</h2>
+            <h2>educational information</h2>            <!-- section for educational information -->
             <div class="section2">
                 <h4>college/university name</h4>
                 <input type="text" class="college" placeholder="entetr colege name">
@@ -78,7 +86,7 @@
         <p>
         <div class="section3">
             <h2>skills</h2>
-            <div class="s" id="se">
+            <div class="skills" id="se">
                 <textarea class="skills" placeholder="add skills"></textarea>
                 <button type="submit" onclick="addnewskfield()" id="addbutton">add</button>
             </div>
@@ -87,9 +95,17 @@
         <p>
         <div class="section4">
             <h2>hobbies</h2>
-            <div class="h" id="we">
+            <div class="hobbies" id="we">
                 <textarea class="hobbies" placeholder="add hobbies"></textarea>
                 <button type="submit" onclick="addnewWEfield()" id="weaddbutton">add</button>
+            </div>
+        </div>
+        </p>
+        <p>
+        <div>
+            <h2>objective</h2>
+            <div class="object">
+                <textarea cols="30" rows="10" class="objective" placeholder="objective"></textarea>
             </div>
         </div>
         </p>
@@ -100,34 +116,45 @@
     </div>
     <div class="container1" id="cv">
         <div class="row">
-            <div class="col">
-                <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" class="img-fluid myimg">
-                <div class="container1">
+            <div class="col1">
+                <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" class="img-fluid myimg" id="img">
+                <div class="container2">
                     <p id="name">name</p>  <p id="age">age</p>
                     <p id="mobile">+91 1111111111</p>
                     <p id="address">address</p>
                     <hr>
                     <p>
                         <a href="" id="email">link1</a>
-                        <a href="" id="linkedin"></a>
+                        <a href="" id="linkedin">link2</a>
                         <a href=""></a>
                     </p>
                 </div>
             </div>
-            <div class="col">
-                <h1 id="name">name</h1>
+            <div class="col2">
+                <div class="card">
+                    <div class="cardheader">
+                        <h2 id="">
+                            objective
+                        </h2>
+                    </div>
+                    <div class="cardbody">
+                        <h4 id="objective">objective</h4>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="cardheader">
                         <h2>
                             educational information                           
                         </h2>
                     </div>
+                    <div class="cardbody">
                         <p>
                             <h4 id="college">college/university name</h4>
                             <h4 id="course">course</h4>
                             <h4 id="start date">start date</h4>
                             <h4 id="end date">end date</h4>
                         </p>
+                        </div>
                     </div>
                 <div class="card">
                     <div class="cardheader">
@@ -157,6 +184,9 @@
         <button type="submit" id="download" onclick="download()" class="submit">download</button>
         </div>
     </div>
+
+    
+
     <script src="script.js"></script>
 </body>
 </html>
