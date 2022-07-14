@@ -36,6 +36,8 @@ function addnewskfield(){
 
 function generatecv(){
 
+    // adding value of the form in the cv
+
     let name=document.getElementById("name");
     let name1=document.getElementsByClassName("name")[0].value;
     name.innerhtml=name1;
@@ -64,30 +66,32 @@ function generatecv(){
 
     document.getElementById("hobbies").innerHTML=document.getElementsByClassName("hobbies")[0].value;
 
-    // let we=document.getElementsByClassName("skills");
-    // let str="";
+    // printing new skills in the next line
 
-    // for(let e of we){
-    //     str = str + '<li> ${e.value} </li>';
-    // }
+    let we=document.getElementsByClassName("skills");
+    let str="";
 
-    // document.getElementById("skills").innerHTML= str;
+    for(let e of we){
+        str = str + `<li> ${e.value} </li>`;
+    }
 
-    // let ho=document.getElementsByClassName("hobbies");
-    // let str1="";
+    document.getElementById("skills").innerHTML= str;
 
-    // for(let e of ho){
-    //     str1 = str1+'<li>${e.value}</li>';
-    // }
+    let ho=document.getElementsByClassName("hobbies");
+    let str1="";
 
-    // document.getElementById("hobbies").innerHTML= str1;
+    for(let e of ho){
+        str1 = str1+`<li>${e.value}</li>`;
+    }
+
+    document.getElementById("hobbies").innerHTML= str1;
 
 
-    let file=document.getElementsByClassName("img")[0].file;
+    let file=document.getElementById("img1").file;
 
     let reader=new FileReader();
 
-    reader.readAsDataURL(file);
+    // reader.readAsDataURL(file);
 
     reader.onloadend=function(){
         document.getElementById("img").src=reader.result;

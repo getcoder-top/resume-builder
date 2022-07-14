@@ -93,24 +93,17 @@ button:hover{
 
 
 
-.container1{
-    width: 80%;
-    text-align: center;
-    background-color: white;
-}
-
 
 .col1{
     text-align: center;
     height: 250px;
-    width: 100%;
+    width: 80px;
     background-color: lightseagreen;
     margin-bottom: 0px;
     
 }
 
 .col2{
-    height: 500px;
     width: 100%;
 }
 img{
@@ -150,4 +143,16 @@ div #name{
 
 .imgclass{
     display: flex;
+}
+
+.container1{
+    text-align: center;
+    background-color: black;
+    padding: 40px;
+    margin: 90px;
+    border-radius: 20px;
+
+}
+.cardbody{
+    border-radius: none;
 }
